@@ -19,4 +19,19 @@ class ParkingBoyFactsTest {
         //then
         assertEquals("01", ticket.getCarId());
     }
+
+    @Test
+    void should_return_a_car_when_fetch_car_given_parking_ticket_parkingBoy_a_car_in_parkingLot() {
+        //given
+        ParkingBoy parkingBoy = new ParkingBoy();
+        Ticket ticket = new Ticket("01");
+
+        //when
+        String carId = parkingBoy.fetchCar(ticket.getCarId());
+
+        //then
+        assertEquals("car", carId);
+
+
+    }
 }
