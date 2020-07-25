@@ -111,4 +111,17 @@ class ParkingBoyFactsTest {
         //then
         assertEquals(null, secondFetch);
     }
+
+    @Test
+    void should_return_a_car_and_when_park_given_a_car_parkingLot_capacity_parkingBoy() {
+        //given
+        ParkingBoy parkingBoy = new ParkingBoy();
+        Car car = new Car();
+
+        //when
+        Ticket ticket = parkingBoy.parkCar(car);
+
+        //then
+        assertEquals(null, ticket);
+    }
 }
