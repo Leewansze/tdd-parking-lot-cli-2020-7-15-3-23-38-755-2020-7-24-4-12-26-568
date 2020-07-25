@@ -116,12 +116,32 @@ class ParkingBoyFactsTest {
     void should_return_a_car_and_when_park_given_a_car_parkingLot_capacity_parkingBoy() {
         //given
         ParkingBoy parkingBoy = new ParkingBoy();
-        Car car = new Car();
+        Car car1 = new Car();
+        Car car2 = new Car();
+        Car car3 = new Car();
+        Car car4 = new Car();
+        Car car5 = new Car();
+        Car car6 = new Car();
+        Car car7 = new Car();
+        Car car8 = new Car();
+        Car car9 = new Car();
+        Car car10 = new Car();
+        Car car11 = new Car();
 
         //when
-        Ticket ticket = parkingBoy.parkCar(car);
+        Ticket ticket1 = parkingBoy.parkCar(car1);
+        Ticket ticket2 = parkingBoy.parkCar(car2);
+        Ticket ticket3 = parkingBoy.parkCar(car3);
+        Ticket ticket4 = parkingBoy.parkCar(car4);
+        Ticket ticket5 = parkingBoy.parkCar(car5);
+        Ticket ticket6 = parkingBoy.parkCar(car6);
+        Ticket ticket7 = parkingBoy.parkCar(car7);
+        Ticket ticket8 = parkingBoy.parkCar(car8);
+        Ticket ticket9 = parkingBoy.parkCar(car9);
+        Ticket ticket10 = parkingBoy.parkCar(car10);
+        Ticket ticket11 = parkingBoy.parkCar(car11);
 
         //then
-        assertEquals(null, ticket);
+        assertEquals(null, ticket11);
     }
 }
