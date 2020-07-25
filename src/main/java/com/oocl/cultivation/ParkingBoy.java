@@ -1,6 +1,7 @@
 package com.oocl.cultivation;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class ParkingBoy {
@@ -18,6 +19,14 @@ public class ParkingBoy {
     }
 
     public Car fetchCar(Ticket ticket) {
-        return this.parkingBoy.get(ticket);
+        Car car = this.parkingBoy.get(ticket);
+        Iterator iterator = parkingBoy.keySet().iterator();
+        while (iterator.hasNext()) {
+            Object key = iterator.next();
+            if (ticket.equals(key)) {
+                parkingBoy.remove(key);
+            }
+        }
+        return car;
     }
 }

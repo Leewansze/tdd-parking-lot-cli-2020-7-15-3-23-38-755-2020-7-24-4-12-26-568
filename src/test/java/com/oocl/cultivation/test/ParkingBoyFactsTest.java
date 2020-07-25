@@ -105,7 +105,7 @@ class ParkingBoyFactsTest {
         Ticket ticket = parkingBoy.parkCar(parkingCar);
 
         //when
-        Car firstFetch = parkingBoy.fetchCar(ticket);
+        parkingBoy.fetchCar(ticket);
         Car secondFetch = parkingBoy.fetchCar(ticket);
 
         //then
