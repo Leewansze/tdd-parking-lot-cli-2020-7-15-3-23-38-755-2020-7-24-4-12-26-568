@@ -84,4 +84,16 @@ class ParkingBoyFactsTest {
         //then
         assertEquals(null, noExistCar);
     }
+
+    @Test
+    void should_return_null_when_fetch_car_given_parkingBoy() {
+        //given
+        ParkingBoy parkingBoy = new ParkingBoy();
+
+        //when
+        Car noExistCar = parkingBoy.fetchCar(null);
+
+        //then
+        assertEquals(null, noExistCar);
+    }
 }
