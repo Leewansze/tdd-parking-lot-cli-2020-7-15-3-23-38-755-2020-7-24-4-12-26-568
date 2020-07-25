@@ -74,8 +74,6 @@ class ParkingBoyFactsTest {
     void should_return_null_when_fetch_car_given_a_wrong_ticket_and_parkingBoy() {
         //given
         ParkingBoy parkingBoy = new ParkingBoy();
-        Car car = new Car();
-        Ticket rightTicket = parkingBoy.parkCar(car);
         Ticket fakeTicket = new Ticket();
 
         //when
