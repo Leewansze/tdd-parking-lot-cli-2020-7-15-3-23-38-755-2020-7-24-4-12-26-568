@@ -25,7 +25,6 @@ class ParkingBoyFactsTest {
     void should_return_a_car_when_fetch_car_given_parking_ticket_parkingBoy_a_car_in_parkingLot() {
         //given
         ParkingBoy parkingBoy = new ParkingBoy();
-//        Ticket ticket = new Ticket();
         Car car = new Car();
 
         //when
@@ -36,6 +35,5 @@ class ParkingBoyFactsTest {
         assertNotNull(ticket);
         assertEquals(car, carGetFromParkingBoy);
     }
-
 
 }

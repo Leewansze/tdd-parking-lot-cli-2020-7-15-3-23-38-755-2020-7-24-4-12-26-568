@@ -1,13 +1,6 @@
 package com.oocl.cultivation;
 
 public class Ticket {
-    private String carId;
+    private Car car;
 
-    public Ticket(String carId) {
-        this.carId = carId;
-    }
-
-    public String getCarId() {
-        return carId;
-    }
 }
