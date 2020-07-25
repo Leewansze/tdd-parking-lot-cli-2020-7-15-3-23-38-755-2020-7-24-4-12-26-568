@@ -82,7 +82,7 @@ class ParkingBoyFactsTest {
         Car noExistCar = parkingBoy.fetchCar(fakeTicket);
 
         //then
-        assertEquals(null, noExistCar);
+        assertEquals("Unrecognized parking ticket.", noExistCar);
     }
 
     @Test
@@ -109,7 +109,7 @@ class ParkingBoyFactsTest {
         Car secondFetch = parkingBoy.fetchCar(ticket);
 
         //then
-        assertEquals(null, secondFetch);
+        assertEquals("Unrecognized parking ticket.", secondFetch);
     }
 
     @Test
