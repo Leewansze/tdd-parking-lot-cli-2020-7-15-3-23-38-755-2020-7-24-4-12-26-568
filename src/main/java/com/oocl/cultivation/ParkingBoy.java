@@ -7,15 +7,21 @@ import java.util.Map;
 public class ParkingBoy {
     private Map<Ticket, Car> parkingBoy;
     private Ticket ticket;
+    private int parkingLotCapacity;
 
     public ParkingBoy() {
+        this.parkingLotCapacity = 10;
         this.parkingBoy = new HashMap<>();
     }
 
     public Ticket parkCar(Car car) {
-        Ticket ticket = new Ticket();
-        this.parkingBoy.put(ticket, car);
-        return ticket;
+        if(parkingLotCapacity > 0){
+            Ticket ticket = new Ticket();
+            this.parkingBoy.put(ticket, car);
+            parkingLotCapacity--;
+            return ticket;
+        }
+        return null;
     }
 
     public Car fetchCar(Ticket ticket) {
