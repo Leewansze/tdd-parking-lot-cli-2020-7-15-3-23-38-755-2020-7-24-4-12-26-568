@@ -80,7 +80,7 @@ class ParkingBoyFactsTest {
         Car noExistCar = parkingBoy.fetchCar(fakeTicket);
 
         //then
-        assertEquals("Unrecognized parking ticket.", noExistCar);
+        assertEquals(null, noExistCar);
     }
 
     @Test
@@ -107,7 +107,7 @@ class ParkingBoyFactsTest {
         Car secondFetch = parkingBoy.fetchCar(ticket);
 
         //then
-        assertEquals("Unrecognized parking ticket.", secondFetch);
+        assertEquals(null, secondFetch);
     }
 
     @Test
@@ -141,5 +141,18 @@ class ParkingBoyFactsTest {
 
         //then
         assertEquals(null, ticket11);
+    }
+
+    @Test
+    void should_return_error_message_when_fetch_car_given_a_wrong_ticket_a_parkingBoy() {
+        //given
+        ParkingBoy parkingBoy = new ParkingBoy();
+        Ticket ticket = new Ticket();
+
+        //when
+        String errMessage = parkingBoy.fetchCarReturnDetail(ticket);
+
+        //then
+        assertEquals("Unrecognized parking ticket.", errMessage);
     }
 }
