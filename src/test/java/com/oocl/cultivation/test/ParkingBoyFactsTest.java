@@ -36,4 +36,24 @@ class ParkingBoyFactsTest {
         assertEquals(car, carGetFromParkingBoy);
     }
 
+    @Test
+    void should_return_2_tickets_when_park_car_given_2_cars_and_parkingBoy() {
+        //given
+        ParkingBoy parkingBoy = new ParkingBoy();
+        Car firstCar = new Car();
+        Car secondCar = new Car();
+
+        //when
+        Ticket firsrTicket = parkingBoy.parkCar(firstCar);
+        Ticket secondTicket = parkingBoy.parkCar(secondCar);
+
+        Car getfirstCarFromParkingBoy = parkingBoy.fetchCar(firsrTicket);
+        Car getSecondCarFromParkingBoy = parkingBoy.fetchCar(secondTicket);
+
+        //then
+        assertEquals(firstCar, getfirstCarFromParkingBoy);
+        assertEquals(secondCar, getSecondCarFromParkingBoy);
+
+
+    }
 }
