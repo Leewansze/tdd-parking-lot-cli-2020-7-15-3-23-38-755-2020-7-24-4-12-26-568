@@ -96,4 +96,19 @@ class ParkingBoyFactsTest {
         //then
         assertEquals(null, noExistCar);
     }
+
+    @Test
+    void should_return_null_when_fetch_car_given_a_outdate_ticket_and_parkingBoy() {
+        //given
+        ParkingBoy parkingBoy = new ParkingBoy();
+        Car parkingCar = new Car();
+        Ticket ticket = parkingBoy.parkCar(parkingCar);
+
+        //when
+        Car firstFetch = parkingBoy.fetchCar(ticket);
+        Car secondFetch = parkingBoy.fetchCar(ticket);
+
+        //then
+        assertEquals(null, secondFetch);
+    }
 }
