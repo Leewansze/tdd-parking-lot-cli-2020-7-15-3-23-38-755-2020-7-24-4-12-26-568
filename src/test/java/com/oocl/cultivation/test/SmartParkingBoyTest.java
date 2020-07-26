@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class SmartParkingBoyTest {
     @Test
-    void should_return_a_tikcet_when_park_car_to_more_position_parkingLot_given_a_smart_parkingBoy_a_car_3_parkingLots() {
+    void should_return_a_tikcet_when_park_car_to_more_position_parkingLot_given_a_smart_parkingBoy_a_car_2_parkingLots() {
         //given
         List<ParkingLot> parkingLots = new ArrayList<>();
         for (int index = 0; index < 2; index++){

@@ -59,4 +59,8 @@ public class ParkingLot {
     public boolean isFillOutParkingLotCapacity(){
         return this.parkingLotCapacity <= 0;
     }
+
+    public int getParkingLotCapacity() {
+        return parkingLotCapacity;
+    }
 }
