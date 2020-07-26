@@ -155,4 +155,16 @@ class ParkingBoyFactsTest {
         //then
         assertEquals("Unrecognized parking ticket.", errMessage);
     }
+
+    @Test
+    void should_return_error_message_when_fetch_car_given_null_ticket_a_parkingBoy() {
+        //given
+        ParkingBoy parkingBoy = new ParkingBoy();
+
+        //when
+        String errorMessage = parkingBoy.fetchCarReturnDetail(null);
+
+        //then
+        assertEquals("Please provide your parking ticket.", errorMessage);
+    }
 }
