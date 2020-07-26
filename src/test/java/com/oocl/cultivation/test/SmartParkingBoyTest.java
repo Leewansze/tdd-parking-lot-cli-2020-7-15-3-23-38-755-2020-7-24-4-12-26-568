@@ -15,11 +15,11 @@ public class SmartParkingBoyTest {
     @Test
     void should_return_a_tikcet_when_park_car_to_more_position_parkingLot_given_a_smart_parkingBoy_a_car_3_parkingLots() {
         //given
-        SmartParkingBoy smartParkingBoy = new SmartParkingBoy();
         List<ParkingLot> parkingLots = new ArrayList<>();
         for (int index = 0; index < 2; index++){
             parkingLots.add(new ParkingLot());
         }
+        SmartParkingBoy smartParkingBoy = new SmartParkingBoy(parkingLots);
         parkingLots.get(0).parkCar(new Car());
 
         //when
