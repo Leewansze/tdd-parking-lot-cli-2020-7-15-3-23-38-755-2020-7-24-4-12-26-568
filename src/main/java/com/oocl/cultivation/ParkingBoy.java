@@ -36,4 +36,12 @@ public class ParkingBoy {
         this.parkingBoy.remove(ticket);
         return car;
     }
+
+    public String fetchCarReturnDetail(Ticket ticket) {
+        Car car = this.fetchCar(ticket);
+        if(car == null){
+            return "Unrecognized parking ticket.";
+        }
+        return car.toString();
+    }
 }
