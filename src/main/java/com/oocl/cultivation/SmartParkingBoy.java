@@ -13,14 +13,14 @@ public class SmartParkingBoy {
     public Ticket parkCarInMorePositionParkingLot(Car car) {
         ParkingLot parkingLotMax = parkingLots.get(0);
         for(int index = 0; index < parkingLots.size(); index++){
-            if(parkingLotMax.getParkingLotCapacity() < parkingLots.get(index).getParkingLotCapacity()){
+            if(parkingLotMax.getParkingLot().size() > parkingLots.get(index).getParkingLot().size()){
                 parkingLotMax = parkingLots.get(index);
             }
         }
 
         Ticket ticket = parkingLotMax.parkCar(car);
-//        System.out.println(parkingLots.get(1).getParkingLotCapacity());
-//        System.out.println(parkingLots.get(0).getParkingLotCapacity());
+        System.out.println(parkingLots.get(1).getParkingLot().size());
+        System.out.println(parkingLots.get(0).getParkingLot().size());
         return ticket;
     }
 

@@ -60,7 +60,11 @@ public class ParkingLot {
         return this.parkingLotCapacity <= 0;
     }
 
-    public int getParkingLotCapacity() {
-        return parkingLotCapacity;
+//    public int getParkingLotCapacity() {
+//        return parkingLotCapacity;
+//    }
+
+    public Map<Ticket, Car> getParkingLot() {
+        return parkingLot;
     }
 }

@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class SmartParkingBoyTest {
@@ -27,5 +28,6 @@ public class SmartParkingBoyTest {
 
         //then
         assertNotNull(ticket);
+        assertEquals(1, parkingLots.get(1).getParkingLot().size());
     }
 }
