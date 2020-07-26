@@ -47,4 +47,8 @@ public class ParkingBoy {
         }
         return car.toString();
     }
+
+    public String parkCarReturnDetail(Car car) {
+        return null;
+    }
 }

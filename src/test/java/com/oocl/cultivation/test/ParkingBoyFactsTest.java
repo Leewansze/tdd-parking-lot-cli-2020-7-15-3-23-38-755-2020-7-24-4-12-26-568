@@ -167,4 +167,17 @@ class ParkingBoyFactsTest {
         //then
         assertEquals("Please provide your parking ticket.", errorMessage);
     }
+
+    @Test
+    void should_return_errorMessage_when_park_given_a_car_parkingLot_without_position_parkingBoy() {
+        //given
+        ParkingBoy parkingBoy = new ParkingBoy();
+        Car car = new Car();
+
+        //when
+        String errorMessage = parkingBoy.parkCarReturnDetail(car);
+
+        //then
+        assertEquals("Not enough position.", errorMessage);
+    }
 }
