@@ -11,6 +11,12 @@ public class ParkingBoy {
     }
 
     public Ticket parkingBoyParkCar(Car car) {
+        for (ParkingLot parkingLot : parkingLots) {
+            if (!(parkingLot.isFillOutParkingLotCapacity())) {
+                return parkingLot.parkCar(car);
+            }
+       }
         return null;
+
     }
 }

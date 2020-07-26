@@ -55,4 +55,8 @@ public class ParkingLot {
         }
         return ticket.toString();
     }
+
+    public boolean isFillOutParkingLotCapacity(){
+        return this.parkingLotCapacity <= 0;
+    }
 }
