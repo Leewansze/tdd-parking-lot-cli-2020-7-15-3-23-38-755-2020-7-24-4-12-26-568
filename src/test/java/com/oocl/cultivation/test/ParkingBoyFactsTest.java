@@ -175,6 +175,9 @@ class ParkingBoyFactsTest {
         Car car = new Car();
 
         //when
+        for(int times = 0; times < 11; times++){
+            parkingBoy.parkCarReturnDetail(car);
+        }
         String errorMessage = parkingBoy.parkCarReturnDetail(car);
 
         //then
