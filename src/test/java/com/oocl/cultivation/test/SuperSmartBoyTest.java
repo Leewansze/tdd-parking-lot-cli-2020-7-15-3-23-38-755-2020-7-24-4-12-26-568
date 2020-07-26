@@ -14,10 +14,10 @@ public class SuperSmartBoyTest {
     void should_return_a_ticket_and_right_parkingLot_when_park_in_Larger_avail_position_parkingLot_given_supersmartboy_2_parkingLot_a_car() {
         //given
         List<ParkingLot> parkingLots = new ArrayList<>();
-        SuperSmartBoy superSmartBoy = new SuperSmartBoy();
         for(int index = 0; index < 2; index++){
             parkingLots.add(new ParkingLot());
         }
+        SuperSmartBoy superSmartBoy = new SuperSmartBoy(parkingLots);
         parkingLots.get(0).parkCar(new Car());
 
         //when
