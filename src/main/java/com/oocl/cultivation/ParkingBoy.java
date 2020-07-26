@@ -39,6 +39,9 @@ public class ParkingBoy {
 
     public String fetchCarReturnDetail(Ticket ticket) {
         Car car = this.fetchCar(ticket);
+        if(ticket == null){
+            return "Please provide your parking ticket.";
+        }
         if(car == null){
             return "Unrecognized parking ticket.";
         }
