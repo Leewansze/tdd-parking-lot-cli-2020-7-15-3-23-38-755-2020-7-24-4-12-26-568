@@ -49,6 +49,10 @@ public class ParkingBoy {
     }
 
     public String parkCarReturnDetail(Car car) {
-        return null;
+        Ticket ticket = this.parkCar(car);
+        if(ticket == null){
+            return "Not enough position.";
+        }
+        return ticket.toString();
     }
 }
