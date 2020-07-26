@@ -27,12 +27,13 @@ public class ParkingBoy {
     public Car fetchCar(Ticket ticket) {
         Car car = this.parkingBoy.get(ticket);
         Iterator iterator = parkingBoy.keySet().iterator();
-        while (iterator.hasNext()) {
-            Object key = iterator.next();
-            if (ticket.equals(key)) {
-                parkingBoy.remove(key);
-            }
-        }
+//        while (iterator.hasNext()) {
+//            Object key = iterator.next();
+//            if (ticket.equals(key)) {
+//                parkingBoy.remove(key);
+//            }
+//        }
+        this.parkingBoy.remove(ticket);
         return car;
     }
 }

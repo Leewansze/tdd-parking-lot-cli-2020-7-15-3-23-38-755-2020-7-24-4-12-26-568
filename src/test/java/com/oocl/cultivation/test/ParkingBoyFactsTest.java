@@ -44,10 +44,10 @@ class ParkingBoyFactsTest {
         Car secondCar = new Car();
 
         //when
-        Ticket firsrTicket = parkingBoy.parkCar(firstCar);
+        Ticket firsTicket = parkingBoy.parkCar(firstCar);
         Ticket secondTicket = parkingBoy.parkCar(secondCar);
 
-        Car getfirstCarFromParkingBoy = parkingBoy.fetchCar(firsrTicket);
+        Car getfirstCarFromParkingBoy = parkingBoy.fetchCar(firsTicket);
         Car getSecondCarFromParkingBoy = parkingBoy.fetchCar(secondTicket);
 
         //then
