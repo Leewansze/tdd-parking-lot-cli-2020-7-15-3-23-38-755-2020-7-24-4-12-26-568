@@ -27,6 +27,7 @@ public class ParkingLot {
     public Car fetchCar(Ticket ticket) {
         Car car = this.parkingLot.get(ticket);
         this.parkingLot.remove(ticket);
+        this.parkingLotCapacity++;
         return car;
     }
 
