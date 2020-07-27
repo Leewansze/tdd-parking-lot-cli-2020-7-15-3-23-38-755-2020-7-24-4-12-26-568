@@ -1,10 +1,11 @@
 package com.oocl.cultivation;
 
-import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SuperSmartBoy extends AbstractParkingBoy{
-    List<ParkingLot> parkingLots = new ArrayList<>();
+    List<ParkingLot> parkingLots;
 
     public SuperSmartBoy(List<ParkingLot> parkingLots) {
         this.parkingLots = parkingLots;
@@ -12,13 +13,10 @@ public class SuperSmartBoy extends AbstractParkingBoy{
 
     @Override
     public Ticket parking(Car car) {
-        int parkingLotMaxRate = parkingLots.get(0).calculatePositionRate();
-        ParkingLot parkingLotTmp = null;
-        for(ParkingLot parkingLot: parkingLots){
-            if(parkingLot.calculatePositionRate() > parkingLotMaxRate){
-                parkingLotTmp = parkingLot;
-            }
-        }
-        return parkingLotTmp.parkCar(car);
+        ParkingLot targetParkingLot = parkingLots.stream()
+                .sorted(Comparator.comparingInt(ParkingLot::calculatePositionRate).reversed())
+                .collect(Collectors.toList())
+                .get(0);
+        return targetParkingLot.parkCar(car);
     }
 }
