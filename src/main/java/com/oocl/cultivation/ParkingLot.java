@@ -26,19 +26,13 @@ public class ParkingLot {
 
     public Car fetchCar(Ticket ticket) {
         Car car = this.parkingLot.get(ticket);
-        Iterator iterator = parkingLot.keySet().iterator();
-//        while (iterator.hasNext()) {
-//            Object key = iterator.next();
-//            if (ticket.equals(key)) {
-//                parkingBoy.remove(key);
-//            }
-//        }
         this.parkingLot.remove(ticket);
         return car;
     }
 
     public String fetchCarReturnDetail(Ticket ticket) {
         Car car = this.fetchCar(ticket);
+        //to do - checkTick
         if(ticket == null){
             return "Please provide your parking ticket.";
         }
