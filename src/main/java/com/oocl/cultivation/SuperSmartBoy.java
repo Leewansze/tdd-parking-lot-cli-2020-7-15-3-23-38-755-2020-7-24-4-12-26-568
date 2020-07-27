@@ -12,17 +12,13 @@ public class SuperSmartBoy extends AbstractParkingBoy{
 
     @Override
     public Ticket parking(Car car) {
-        double  availPosrate = countAvailPositionRate(parkingLots.get(0).getParkingLotCapacity());
-        ParkingLot parkingLot = parkingLots.get(0);
-        for(int index = 0; index < parkingLots.size(); index++){
-            double currentRate = countAvailPositionRate(parkingLots.get(index).getParkingLotCapacity());
-            if( currentRate > availPosrate){
-                return parkingLots.get(index).parkCar(car);
+        int parkingLotMaxRate = parkingLots.get(0).calculatePositionRate();
+        ParkingLot parkingLotTmp = null;
+        for(ParkingLot parkingLot: parkingLots){
+            if(parkingLot.calculatePositionRate() > parkingLotMaxRate){
+                parkingLotTmp = parkingLot;
             }
         }
-        return null;
-    }
-    public double countAvailPositionRate(int capacity){
-        return (capacity) / 10;
+        return parkingLotTmp.parkCar(car);
     }
 }

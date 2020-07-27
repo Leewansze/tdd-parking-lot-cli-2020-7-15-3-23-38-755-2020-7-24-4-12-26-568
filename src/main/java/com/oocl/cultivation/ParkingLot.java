@@ -61,4 +61,8 @@ public class ParkingLot {
     public Map<Ticket, Car> getParkingLot() {
         return parkingLot;
     }
+
+    public int calculatePositionRate(){
+        return parkingLotCapacity / 10;
+    }
 }
