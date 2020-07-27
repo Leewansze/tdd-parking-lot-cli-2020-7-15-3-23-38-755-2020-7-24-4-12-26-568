@@ -21,7 +21,7 @@ public class SuperSmartBoyTest {
         parkingLots.get(0).parkCar(new Car());
 
         //when
-        Ticket ticket = superSmartBoy.parkCarInLargerAvailPositionRateLot(new Car());
+        Ticket ticket = superSmartBoy.parking(new Car());
 
         //then
         assertNotNull(ticket);

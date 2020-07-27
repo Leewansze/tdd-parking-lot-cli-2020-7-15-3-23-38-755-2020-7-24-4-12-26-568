@@ -24,7 +24,7 @@ public class SmartParkingBoyTest {
         parkingLots.get(0).parkCar(new Car());
 
         //when
-        Ticket ticket = smartParkingBoy.parkCarInMorePositionParkingLot(new Car());
+        Ticket ticket = smartParkingBoy.parking(new Car());
 
         //then
         assertNotNull(ticket);

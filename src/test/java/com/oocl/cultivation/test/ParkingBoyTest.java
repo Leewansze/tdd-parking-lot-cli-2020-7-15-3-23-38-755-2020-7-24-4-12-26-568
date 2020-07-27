@@ -23,9 +23,9 @@ public class ParkingBoyTest {
 
         //when
         for(int i = 0; i < 12; i++){
-            Ticket ticket = parkingBoy.parkingBoyParkCar(new Car());
+            Ticket ticket = parkingBoy.parking(new Car());
         }
-        Ticket ticket = parkingBoy.parkingBoyParkCar(car);
+        Ticket ticket = parkingBoy.parking(car);
 
         //then
         assertNotNull(ticket);
