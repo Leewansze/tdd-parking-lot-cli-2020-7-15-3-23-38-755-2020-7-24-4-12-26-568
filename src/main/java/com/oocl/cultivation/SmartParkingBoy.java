@@ -14,7 +14,7 @@ public class SmartParkingBoy extends AbstractParkingBoy{
     public Ticket parking(Car car) {
         ParkingLot parkingLotMax = parkingLots.get(0);
         for(int index = 0; index < parkingLots.size(); index++){
-            if(parkingLotMax.getParkingLot().size() > parkingLots.get(index).getParkingLot().size()){
+            if(parkingLotMax.getParkingLotCapacity() < parkingLots.get(index).getParkingLotCapacity()){
                 parkingLotMax = parkingLots.get(index);
             }
         }
